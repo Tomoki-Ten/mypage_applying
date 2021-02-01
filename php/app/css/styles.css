@@ -1,0 +1,445 @@
+body {
+    margin: 0;
+    background-color: rgb(241, 237, 229);
+}
+ul {
+    list-style: none;
+}
+header {
+    color:rgb(249, 246, 240);
+    background-color: rgb(10, 32, 43);
+}
+header h1 {
+    margin: 0;
+    padding: 10px 25px;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+nav {
+    background-color: rgb(37, 109, 78);
+    height: 50px;
+}
+.nav_list_container {
+    margin: 0;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav_list_container li {
+    width: 200px;
+    text-align: center;
+    line-height: 50px;
+}
+.nav_list_container li a {
+    color:rgb(76, 184, 138);
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav_list_container li a:hover {
+    color: rgb(249, 246, 240);
+}
+/* ボタン、CREATE、EDIT、DELETE */
+.controller {
+    height: 50px;
+    padding: 0 100px;
+    background-color: rgb(212, 207, 198);
+    display: flex;
+    justify-content: flex-start;
+}
+#btn_create {
+    height: 20px;
+    margin: 5px 30px 0 10px;
+    padding: 5px 20px;
+    line-height: 20px;
+    display: block;
+    color: rgb(110, 106, 97);
+    font-weight: bold;
+    border: solid;
+    border-radius: 5px;
+}
+#btn_create:hover {
+    cursor: pointer;
+    color:rgb(236, 134, 24);
+}
+#btn_edit {
+    height: 20px;
+    margin: 5px 10px 0 10px;
+    padding: 5px 20px;
+    line-height: 20px;
+    display: block;
+    color: rgb(110, 106, 97);
+    font-weight: bold;
+    border: solid;
+    border-radius: 5px;
+}
+#btn_edit:hover {
+    cursor: pointer;
+    color:rgb(236, 134, 24);
+}
+#btn_delete {
+    margin: 5px 30px 0 10px;
+    padding: 5px 20px;
+    line-height: 20px;
+    display: block;
+    color: rgb(110, 106, 97);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border: solid;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+}
+#btn_delete:hover {
+    cursor: pointer;
+    color:rgb(179, 66, 74);
+}
+.message {
+    margin: 0;
+    color: rgb(110, 106, 97);
+    line-height: 50px;
+    font-weight: bold;
+}
+/* 投稿、表示、index.php */
+.main_contents {
+    width: 80%;
+    background-color: rgb(249, 246, 240);
+}
+.post_container {
+    padding-top: 15px;
+}
+.post {
+    height: 200px;
+    margin: 10px;
+    padding: 5px 10px;
+    display: flex;
+}
+.post_image {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(241, 237, 229);
+    margin-left: 10px;
+    object-fit: contain;
+}
+.post_text_container {
+    margin-left: 10px;
+    width: 100%;
+}
+.post_title {
+    height: 30px;
+    background-color: #f09f47;
+    padding: 5px 30px 0;
+    border-radius: 5px;
+}
+.post_title a {
+    text-decoration: none;
+    color: rgb(89, 81, 67);
+    font-weight: bold;
+}
+.post_title a:hover {
+    color:rgb(249, 246, 240);
+}
+.text_part {
+    height: 165px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.post_text {
+    color: rgb(163, 153, 137);
+}
+.post_time {
+    margin: 0 10px 0 0;
+    font-size: 12px;
+    color:rgb(163, 153, 137);
+    text-align: end;
+}
+/* ページネーション */
+.pagination_container {
+    margin: 20px auto 40px;
+    display: flex;
+    justify-content: center;
+}
+.page_num {
+    width: 30px;
+    height:30px;
+    background: #f9f6f0;
+    border:solid 1px rgb(212, 207, 198);
+    border-radius: 5px;
+}
+.page_num:hover {
+    background-color: rgb(241, 237, 229);
+}
+.able_page_num {
+    padding: 3px 10px;
+    text-decoration: none;
+    color: #ec8618;
+    display: block;
+    border-radius: 5px;
+}
+.disable_page_num {
+    padding: 3px 10px;
+    background-color: rgb(241, 237, 229);
+    color: rgb(110, 106, 97);
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+/* 投稿、表示、each_post.php */
+.each_post_container {
+    width: 75%;
+    padding: 20px;
+    background-color: rgb(249, 246, 240);
+}
+#display {
+    height: 350px;
+    width: 100%;
+    padding-bottom: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#display img {
+    max-height: 100%;
+    max-width: 100%;
+}
+#image_container {
+    height: 100px;
+    /* height: 350px; */
+    width: 100%;
+    padding: 0 20px;
+    display:flex;
+    justify-content: center;
+}
+.image_case {
+    width: 100px;
+    /* width: 500px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.each_image_wider {
+    width: 100%;
+    max-height: 100px;
+    /* max-height: 350px; */
+}
+.each_image_taller {
+    height: 100%;
+}
+.each_text_container {
+    width: 75%;
+    margin: 10px auto 20px;
+    padding: 0 20px;
+}
+.each_title {
+    height: 30px;
+    background-color: #f09f47;
+    padding: 5px 30px 0;
+    border-radius: 5px;
+}
+.each_title span {
+    color: rgb(89, 81, 67);
+    font-weight: bold;
+}
+.long_text_container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.each_text {
+    margin: 0;
+    color: rgb(163, 153, 137);
+    white-space: pre-line;
+}
+/* モーダルウィンドウ */
+#mask {
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#modal_body {
+    position: absolute;
+    z-index: 2;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 600px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 30px 30px 30px;
+    background-color: rgb(249, 246, 240);
+    border-radius: 5px;
+}
+.close_container {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+#close {
+    width: 20px;
+    padding: 0 5px;
+    cursor: pointer;
+    border: solid;
+    border-radius: 5px;
+    color:rgb(236, 134, 24);
+    font-weight: bold;
+    text-align: center;
+}
+#close:hover {
+    color:rgb(37, 109, 78);
+}
+.text_container {
+    margin-bottom: 10px;
+}
+#file_selector {
+    display: none;
+}
+.btn_upload_container {
+    margin-bottom: 15px;
+}
+.file_selector_label {
+    width: 150px;
+    margin-right: 20px;
+    padding: 7px 10px;
+    cursor: pointer;
+    border: solid;
+    border-radius: 5px;
+    color:rgb(236, 134, 24);
+    font-weight: bold;
+}
+.file_selector_label:hover {
+    color:rgb(37, 109, 78);
+}
+#btn_cancel {
+    width: 150px;
+    padding: 7px 10px;
+    cursor: pointer;
+    border: solid;
+    border-radius: 5px;
+    color:rgb(236, 134, 24);
+    font-weight: bold;
+}
+#btn_cancel:hover {
+    color:rgb(37, 109, 78);
+}
+#preview_holder {
+    display: flex;
+    justify-content: center;
+}
+#preview {
+    width: 60%;
+    /* height: 300px; */
+    border-radius: 8px;
+}
+#image_checker {
+    position: fixed;
+    top: 0;
+    left: -20px;
+}
+#post_title {
+    width: 80%;
+}
+.post_title_label {
+    font-weight: bold;
+}
+.post_text_label {
+    font-weight: bold;
+}
+#submit_label {
+    margin-top: 10px;
+    padding: 7px 10px;
+    display: block;
+    cursor: pointer;
+    color:rgb(236, 134, 24);
+    font-weight: bold;
+    border-radius: 5px;
+    border: solid;
+    text-align: center;
+}
+#submit_label:hover {
+    color:rgb(37, 109, 78);
+}
+#submit_post {
+    display: none;
+}
+/* 登録画面 */
+.register_msg {
+    text-align: center;
+}
+.login_msg {
+    text-align: center;
+}
+/* API */
+.youtube {
+    height: 60px;
+    line-height: 60px;
+    background: rgb(182, 0, 51);
+    color: white;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 30px;
+}
+#search_container {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+#search_input {
+    width: 300px;
+}
+#api_container {
+    padding: 0 20px;
+}
+#api_container li {
+    display: flex;
+    margin-bottom: 15px;
+    width: 100%;
+}
+#api_container li div {
+    margin: 0 20px;
+    width: 100%;
+}
+.api_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* justify-content: column; */
+}
+#api_container li div h3 {
+    margin-top: 5px;
+    color: #3ea377;
+}
+#api_container li div p {
+    color: rgb(163, 153, 137);
+}
+.published_at {
+/* #api_container li div .published_at { */
+/* #api_container li div div { */
+    margin: 0 10px 0 0;
+    font-size: 12px;
+    color: rgb(163, 153, 137);
+    text-align: right;
+}
+.more_container {
+    display: flex;
+    justify-content: center;
+}
+.more {
+    width: 100px;
+    background: rgb(182, 0, 51);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.more:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}

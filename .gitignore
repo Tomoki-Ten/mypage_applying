@@ -1,0 +1,5 @@
+#画像の置き場所
+/php/app/storage_images/*
+/php/app/.env
+/php/app/vendor
+/php/app/Tests
